@@ -1,0 +1,75 @@
+.sec-login{
+    position: relative;
+    background-image:url(../../../assets/Header-1.jpg) ;
+    background-size: cover;
+    background-position: center;
+    height: 150vh;
+        
+    }
+    .overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+    }
+.login-container{
+    border: 1px solid #fff;
+    width: 450px;
+    position: relative;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 680px;
+    border-radius: 5px; 
+     background: rgba(0, 0, 0, 0.8);
+
+}
+h2{
+    text-align: center;
+    padding-top: 30px;
+    color: #fff;
+    z-index: 1111;
+}
+.icon{
+    text-align: end;
+    padding: 20px;
+    cursor: pointer;
+}
+.login-container h2{
+    text-align: center;
+    padding-top: 10px;
+}
+.login-container form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+ form label{
+    padding: 8px 0;
+ }
+ form input{
+    width: 350px;
+    height: 40px;
+    border-radius: 5px;
+    
+}
+.button-group{
+    display: flex;
+    justify-content: start;
+}
+button{
+    margin-top: 15px;
+}
+.btn-link {
+    background: none;
+    border: none;
+    /* color: #007bff; */
+    cursor: pointer;
+    text-decoration: underline;
+    
+    padding: 0 10px ;
+    
+  }

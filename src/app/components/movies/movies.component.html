@@ -1,0 +1,27 @@
+<div>
+  <header class="hero-section">
+    <div class="overlay">
+      <div class="hero-content">
+        <h2>Trending Movies This Week</h2>
+       <div class="search-container">
+  <input [(ngModel)]="searchQuery" type="text" placeholder="Search for movies..." class="form-control" (input)="onSearch()">
+  <button (click)="onSearch()" >
+    <fa-icon [icon]="faSearch"></fa-icon> <!-- Optional FontAwesome search icon -->
+  </button>
+</div>
+        <!-- <a href="#" class='btn btn-info'>Watch Free</a> -->
+      </div>
+    </div>
+  </header>
+  <div *ngIf="movies.length; else noData" class="movies">
+    <div *ngFor="let movie of movies" class="movie-card">
+      <img [src]="'https://image.tmdb.org/t/p/w500/' + movie.poster_path" alt="{{ movie.title }}" />
+      <h3>{{ movie.title }}</h3>
+
+      <p>Rating: {{ movie.vote_average }}</p>
+    </div>
+  </div>
+  <ng-template #noData>
+    <p>No movies found.</p>
+  </ng-template>
+</div>

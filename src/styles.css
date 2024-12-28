@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
+:root{
+  --bg-main:#131722;
+  --light-bg:#24beaf;
+  --main-color:#fff;
+}
+body{
+  background-color: var(--bg-main) !important;
+  color: var(--main-color) !important;
+  font-family: 'Montserrat Alternates', sans-serif!important;
+}
+input{
+  background-color: transparent !important;
+  color: var(--main-color) !important;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Importing Bootstrap SCSS file. */
+/* @import 'bootstrap/scss/bootstrap'; */

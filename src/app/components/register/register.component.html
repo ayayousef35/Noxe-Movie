@@ -1,0 +1,75 @@
+<div class="sec-login">
+  <div class="overlay">    <h2>Register</h2>
+  </div>
+  <div class=" login-container">
+    <div class="icon" (click)="navigateToHome()">
+      <fa-icon class=" fs-5" [icon]="faClose"></fa-icon>
+
+    </div>
+    <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+      <div>
+
+        <label>FristName:</label>
+        <input formControlName="fristname" type="text" class="form-control" />
+        <div *ngIf="submitted && f['fristname'].errors" class="mt-2">
+          <small *ngIf="f['fristname'].errors['required']" class="alert py-2 alert-danger">fristname is
+            required.</small>
+          <small *ngIf="f['fristname'].errors['minlength']" class="alert py-2 alert-danger">Minimum 4 characters
+            required.</small>
+        </div>
+
+      </div>
+      <div>
+        <label>LastName:</label>
+        <input formControlName="lastname" type="text" class="form-control" />
+        <div *ngIf="submitted && f['lastname'].errors" class="mt-2">
+          <small *ngIf="f['lastname'].errors['required']" class="alert py-2 alert-danger">lastname is required.</small>
+          <small *ngIf="f['lastname'].errors['minlength']" class="alert py-2 alert-danger">Minimum 4 characters
+            required.</small>
+        </div>
+      </div>
+
+      <div>
+        <label>Email:</label>
+        <input formControlName="email" type="email" class="form-control" />
+        <div *ngIf="submitted && f['email'].errors" class="mt-2">
+          <small *ngIf="f['email'].errors['required']" class="alert py-2 alert-danger">Email is required.</small>
+          <small *ngIf="f['email'].errors['email']" class="alert py-2 alert-danger">Enter a valid email address.</small>
+        </div>
+      </div>
+
+      <div>
+        <label>Password:</label>
+        <input formControlName="password" type="password" class="form-control" />
+        <div *ngIf="submitted && f['password'].errors" class="mt-2">
+          <small *ngIf="f['password'].errors['required']" class="alert py-2 alert-danger">Password is required.</small>
+          <small *ngIf="f['password'].errors['minlength']" class="alert py-2 alert-danger">Minimum 6 characters
+            required.</small>
+        </div>
+      </div>
+
+      <div>
+        <label>Confirm Password:</label>
+        <input formControlName="confirmPassword" type="password" class="form-control" />
+        <div *ngIf="submitted && f['confirmPassword'].errors" class="mt-2">
+          <small *ngIf="f['confirmPassword'].errors['required']" class="alert py-2 alert-danger">Confirm password is
+            required.</small>
+          <small *ngIf="f['confirmPassword'].errors['mustMatch']" class="alert py-2 alert-danger">Passwords must
+            match.</small>
+        </div>
+      </div>
+
+      <div *ngIf="registerError" class="error">
+        {{ registerError }}
+      </div>
+
+      <div class="button-group">
+        <button type="submit" class='btn btn-outline-info'>Register</button>
+        <button type="button" (click)="navigateBackLogin()" class="btn-link text-info    ">Back..</button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+<!-- <p *ngIf="registerError">{{ registerError }}</p> -->

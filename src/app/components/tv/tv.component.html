@@ -1,0 +1,22 @@
+<div>
+    <header class="hero-section">
+        <div class="overlay">
+            <div class="hero-content">
+                <h2>Don’t forget free TV.  </h2>
+                <p>A Live TV free for all has begun. Enjoy instant access to 600+ channels for the whole family anywhere, on any device.  </p>
+                <div class="overlay-content"></div>
+            </div>
+        </div>
+    </header>
+    <div *ngIf="tvShows.length; else noData" class="movies">
+        <div *ngFor="let show of tvShows" class="movie-card">
+            <img [src]="'https://image.tmdb.org/t/p/w500/' + show.poster_path" alt="{{ show.title }}" />
+            <h3>{{ show.name }}</h3>
+
+            <p>Rating: {{ show.first_air_date | date}}</p>
+        </div>
+    </div>
+    <ng-template #noData>
+        <p>No movies found.</p>
+    </ng-template>
+</div>

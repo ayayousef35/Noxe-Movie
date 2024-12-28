@@ -1,0 +1,173 @@
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background-image: url('../../../assets/hero.jpg'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+  }
+  
+  .hero-content {
+    text-align: center;
+    color: #fff;
+    max-width: 600px;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+     /* Yellow button */
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+
+
+  #about-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+
+#about-head img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional: adds a modern touch */
+}
+
+#about-head h2,
+#about-head h4 {
+    margin-bottom: 15px;
+    color: #fff; /* Adjust as per your theme */
+}
+
+#about-head p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #f5f5f5;
+}
+
+@media (max-width: 768px) {
+    #about-head {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #about-head img {
+        margin-bottom: 20px;
+    }
+}
+
+/* .bannar{
+  position: relative;
+  height: 50vh;
+  background-image: url('../../../assets/movies-banner.jpg'); 
+  background-size: cover;
+  background-position: center;
+}
+.info-banner{
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  transform: translate(-50px,-40px);
+} */
+.banner {
+  background-image: url(../../../assets/movies-banner.jpg);/* Optional: change to your background color */
+  background-size: cover;
+  background-position: center;
+  padding: 30px 0;
+  border-radius: 10px; /* Optional: rounded corners for a modern look */
+}
+
+.info-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote-text {
+  font-size: 1.2rem;
+  color: #f5f5f5;
+  margin: 20px 0;
+  line-height: 1.6;
+  max-width: 800px; /* Ensures the text does not span the entire width */
+}
+
+.author-name {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  margin-top: 10px;
+}
+
+.designation {
+  font-size: 1.1rem;
+  color: #f9f5f3;
+  margin-top: 5px;
+}
+
+.icon {
+  color: #007bff; /* Customize the icon color */
+  margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .info-banner {
+      width: 90%; /* Full width on small screens */
+  }
+
+  .quote-text {
+      font-size: 1rem; /* Smaller text on mobile */
+  }
+
+  .author-name {
+      font-size: 1.5rem; /* Adjust font size on mobile */
+  }
+
+  .designation {
+      font-size: 1rem; /* Adjust font size on mobile */
+  }
+}
+
+
+
+
+@media (max-width:477px) {
+  #about-head{
+    flex-direction: column;
+  
+}
+  .box-copyright{
+      flex-direction: column;
+      font-size:18px ;
+  }
+}
