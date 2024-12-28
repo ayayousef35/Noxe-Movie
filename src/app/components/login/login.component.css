@@ -16,6 +16,7 @@ height: 100vh;
 }
 .login-container{
     border: 1px solid #fff;
+    max-width: 90%;
     width: 385px;
     position: absolute;
     top: 55%;
@@ -43,14 +44,15 @@ h2{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 90%;
 }
  form label{
     padding: 15px 0;
  }
  form input{
-    width: 320px;
     height: 40px;
     border-radius: 5px;
+    width: 100%;
     
 }
 button{

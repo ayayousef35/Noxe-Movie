@@ -16,6 +16,7 @@
     }
 .login-container{
     border: 1px solid #fff;
+    max-width: 90%; /* Responsive width for smaller devices */
     width: 450px;
     position: relative;
     top: 45%;
@@ -46,19 +47,21 @@ h2{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 90%;
+
 }
  form label{
     padding: 8px 0;
  }
  form input{
-    width: 350px;
+    width: 100%;
     height: 40px;
     border-radius: 5px;
     
 }
 .button-group{
     display: flex;
-    justify-content: start;
+    justify-content:flex-start;
 }
 button{
     margin-top: 15px;
